@@ -1,0 +1,101 @@
+:root {
+	--primary-color: orangered;
+	--secondary-color: #333;
+	--disabled-color: #ccc;
+	--bg-color: gainsboro;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+}
+
+body {
+	color: var(--secondary-color);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+main {
+	padding: 0 1em;
+}
+
+a {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: red;
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 9px;
+}
+
+button {
+	outline: none;
+	color: white;
+    background-color: orangered;
+    font-weight: bold;
+}
+
+button:disabled {
+	color: var(--disabled-color);
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+input.alert {
+    border: 1px solid var(--primary-color)!important;
+}
+
+table {
+	background-color: var(--bg-color);
+	border-radius: 9px;
+	padding: 9px;
+	display: inline-block;
+	font-size: 13px;
+	width: 90%;
+}
+
+hr {
+	border-top: 1px solid gray;
+}
+
+.form {
+	display: flex;
+    justify-content: center;
+}
+
+.form-field {
+  display: inline;
+}
+
+input, select {
+  margin: 0px;
+  width: 100%;
+} 
