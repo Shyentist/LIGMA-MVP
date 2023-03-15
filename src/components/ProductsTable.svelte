@@ -108,6 +108,7 @@
 
 <div><h2>Products Catalogue</h2></div>
 
+<div class="table-wrapper">
 <table>
   <thead class="form">
       <input type="text" bind:value={filterKey} placeholder="Filter by all">
@@ -181,8 +182,18 @@
     {/await}
   </tbody>
 </table>
+</div>
 
 <style>
+
+.table-wrapper {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+
 
 table :global(.form-field) {
     width: 10%;
@@ -192,8 +203,37 @@ table :global(label){
   font-weight: bold;
 }
 
+tbody {
+  display: block;
+}
+
 #add-product :global(input), #add-product :global(select), #add-product button {
   margin-top: 3px;
+  margin: 0px;
+  width: 100%;
 }
+
+table {
+	background-color: var(--bg-color);
+	border-radius: 9px;
+	padding: 9px;
+	font-size: 0.6em;
+  min-width: 1000px;
+  width: 100%;
+}
+
+.form {
+	display: flex;
+    justify-content: center;
+}
+
+.form-field {
+  display: inline;
+}
+
+input, select {
+  margin: 0px;
+  width: 100%;
+} 
 
 </style>

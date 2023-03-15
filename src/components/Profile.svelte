@@ -15,10 +15,14 @@ const url = "https://www.eol.org/pages/1554"
 <div class="profile-sheet">
     <div class="profile-info">
         <div class="name-and-surname">
+            <div>
             <b>Name:</b>
-            <input type="text" disabled placeholder={"Johnson"}> 
+            <input type="text" disabled placeholder={"Johnson"}>
+            </div>
+            <div>
             <b>Surname:</b>
             <input type="text" disabled placeholder={"The Poison Dart Frog"}>
+            </div>
         </div>
         <div class="biography">
             <b>Biography:</b>
@@ -57,26 +61,35 @@ const url = "https://www.eol.org/pages/1554"
         border: 4px var(--primary-color) solid;
     }
 
-    .name-and-surname {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .name-and-surname div {
+        width:100%;
+        text-align: left;
     }
 
-    .name-and-surname input {
-        width:40%;
+    @media (min-width: 600px) {
+        .name-and-surname div {
+            display: inline-block;
+            width:50%;
+            display: flex;
+            align-items: center;
+    }
+
+        .name-and-surname {
+            display: flex;
+        }
     }
 
     .biography {
         text-align: left;
-        margin-top: 20px;
-    }
-
-    .biography textarea {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .biography, .name-and-surname {
         padding: 10px;
     }
+
+    input {
+        margin: 0px;
+        width: 100%;
+    } 
 </style>

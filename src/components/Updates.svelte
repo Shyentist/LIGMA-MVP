@@ -21,13 +21,8 @@
 
 
 <style>
-    .update-bubble-container {
-        width: 90%;
-        margin: 0 5%;
-    }
 
     .update-bubble {
-        width: 100%;
         background-color: var(--bg-color);
         border-radius: 9px;
         padding: 9px;
